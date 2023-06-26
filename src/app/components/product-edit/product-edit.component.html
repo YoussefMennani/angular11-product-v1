@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <h3>New Product</h3>
+    <hr/>
+    <form [formGroup]="productFormGroup">
+        {{ productFormGroup.value | json }}
+
+
+        <div class="form-group">
+            <input type="text" class="form-control" formControlName="id" hidden />
+        </div>
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" formControlName="name" 
+            [ngClass]="{'is-invalid':submitted && productFormGroup.controls['name'].errors}"
+            >
+
+            <div class="valid-feedback">Valid.</div>
+            <div *ngIf="submitted && productFormGroup.controls['name'].errors" class="invalid-feedback">
+                <div *ngIf="productFormGroup.controls['name'].errors['required']">Champs Name est Obligatoire.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Price</label>
+            <input type="text" class="form-control" formControlName="price">
+        </div>
+
+
+        <div class="form-group">
+            <label>Quantity</label>
+            <input type="text" class="form-control" formControlName="quantity">
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" formControlName="available" />
+            <label class="mx-2">Available</label>
+            
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" formControlName="selected"/>
+            <label class="mx-2">Selected</label>
+            
+        </div>
+
+        <button class="btn btn-success" (click)="onUpdateProduct()">Edit</button>
+    </form>
+</div>
