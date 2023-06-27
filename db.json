@@ -6,14 +6,14 @@
       "price": 1500,
       "quantity": 23,
       "selected": true,
-      "available": true
+      "available": false
     },
     {
       "id": 1,
       "name": "phone",
       "price": 1500,
       "quantity": 23,
-      "selected": true,
+      "selected": false,
       "available": true
     },
     {
@@ -21,40 +21,8 @@
       "price": "1200",
       "quantity": "1200",
       "selected": true,
-      "available": true,
+      "available": false,
       "id": 2
-    },
-    {
-      "name": "dsds",
-      "price": "122",
-      "quantity": "212",
-      "selected": true,
-      "available": true,
-      "id": 3
-    },
-    {
-      "name": "",
-      "price": 0,
-      "quantity": 0,
-      "selected": true,
-      "available": true,
-      "id": 4
-    },
-    {
-      "name": "rere",
-      "price": 0,
-      "quantity": 0,
-      "selected": true,
-      "available": true,
-      "id": 5
-    },
-    {
-      "id": 6,
-      "name": "hello menn",
-      "price": 0,
-      "quantity": 0,
-      "selected": true,
-      "available": true
     }
   ]
 }

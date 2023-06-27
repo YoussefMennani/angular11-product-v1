@@ -1,4 +1,4 @@
-import { DataStateEnum, AppDataState } from './../../state/product.state';
+import { DataStateEnum, AppDataState, ProductActionsTypes, ActionEvent } from './../../state/product.state';
 import { catchError, map, Observable, of, startWith } from 'rxjs';
 import { Product } from './../../model/product.model';
 import { Component } from '@angular/core';
@@ -21,7 +21,7 @@ export class ProductsComponent {
     private router: Router,
     ) { }
   ngOnInit(): void {
-    this.onGetAllProducts()
+    // this.onGetAllProducts()
   }
   public onGetAllProducts() {
     this.products$ = this.productsService.getAllProducts().pipe(
@@ -90,6 +90,21 @@ export class ProductsComponent {
   onEditProduct(idProduct:number) {
 
     this.router.navigateByUrl("/editProduct/"+idProduct)
+  }
+
+  onActionEvent($event:ActionEvent){
+    
+    switch($event.type){
+      case ProductActionsTypes.GET_ALL_PRODUCTS : this.onGetAllProducts();break;
+      case ProductActionsTypes.GET_SELECTED_PRODUCTS : this.onGetSelectedProducts();break;
+      case ProductActionsTypes.GET_AVAILABLE_PRODUCTS : this.onGetAvailableProducts();break;
+      case ProductActionsTypes.SEARCH_PRODUCTS : this.onSearch($event.payload);break;
+      case ProductActionsTypes.NEW_PRODUCT : this.onNewProduct();break;
+      case ProductActionsTypes.DELETE_PRODUCT : this.onDelete($event.payload);break;
+      case ProductActionsTypes.EDIT_PRODUCT : this.onEditProduct($event.payload);break;
+      case ProductActionsTypes.SELECT_PRODUCT : this.onNewProduct();break;
+    }
+    
   }
 
 }

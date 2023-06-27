@@ -14,6 +14,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { ToastrModule } from 'ngx-toastr';
+import { PoductsNavBarComponent } from './components/products/poducts-nav-bar/poducts-nav-bar.component';
+import { PoductsListComponent } from './components/products/poducts-list/poducts-list.component';
+import { ProductItemComponent } from './components/products/poducts-list/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { ToastrModule } from 'ngx-toastr';
     HomeComponent,
     ProductAddComponent,
     ProductEditComponent,
+    PoductsNavBarComponent,
+    PoductsListComponent,
+    ProductItemComponent,
     
   ],
   imports: [

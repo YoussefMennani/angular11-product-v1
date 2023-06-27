@@ -1,0 +1,16 @@
+<tr>
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.quantity}}</td>
+    <td>{{product.selected}}</td>
+    <td>{{product.available}}</td>
+    <td>
+        <button class="btn btn-danger mx-1 bg-danger text-white" (click)="onDelete(product.id)">
+            <i class="fa fa-trash" ></i> Delete
+        </button>
+        <button class="btn btn-primary bg-primary text-white" (click)="onEditProduct(product.id)">
+            <i class="fa fa-trash"  ></i> Edit
+        </button>
+    </td>
+</tr>
