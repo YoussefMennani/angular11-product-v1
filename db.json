@@ -5,23 +5,15 @@
       "name": "phone",
       "price": 1500,
       "quantity": 23,
-      "selected": true,
-      "available": false
-    },
-    {
-      "id": 1,
-      "name": "phone",
-      "price": 1500,
-      "quantity": 23,
       "selected": false,
       "available": true
     },
     {
-      "name": "hamied",
-      "price": "1200",
-      "quantity": "1200",
+      "name": "hello",
+      "price": 0,
+      "quantity": 0,
       "selected": true,
-      "available": false,
+      "available": true,
       "id": 2
     }
   ]

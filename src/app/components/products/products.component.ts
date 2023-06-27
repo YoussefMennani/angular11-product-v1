@@ -1,3 +1,4 @@
+import { EventDriverService } from './../../state/event.driver.service';
 import { DataStateEnum, AppDataState, ProductActionsTypes, ActionEvent } from './../../state/product.state';
 import { catchError, map, Observable, of, startWith } from 'rxjs';
 import { Product } from './../../model/product.model';
@@ -19,9 +20,14 @@ export class ProductsComponent {
 
   constructor(private productsService: ProductsService,
     private router: Router,
+    private eventDrivenSevice:EventDriverService
     ) { }
   ngOnInit(): void {
     // this.onGetAllProducts()
+    this.onGetAllProducts()
+    this.eventDrivenSevice.sourceEventSubjectObservable.subscribe((actionEvent:ActionEvent)=>{
+      this.onActionEvent(actionEvent);
+    })
   }
   public onGetAllProducts() {
     this.products$ = this.productsService.getAllProducts().pipe(

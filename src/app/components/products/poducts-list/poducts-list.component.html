@@ -24,7 +24,7 @@
                     <th>Available</th>
                     <th>Actions</th>
                 </tr>
-                <app-product-item style="display:contents;" (eventEmitter)="onActionEvent($event)" [product]="p" *ngFor="let p of result.data"></app-product-item>
+                <app-product-item style="display:contents;"  [product]="p" *ngFor="let p of result.data"></app-product-item>
 
             </table>
         </ng-container>

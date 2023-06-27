@@ -11,11 +11,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class PoductsListComponent {
 
   @Input() productsInput$: Observable<AppDataState<Product[]>> | null = null;
-  @Output() productEventEmitter : EventEmitter<ActionEvent> = new EventEmitter();
+  //@Output() productEventEmitter : EventEmitter<ActionEvent> = new EventEmitter();
 
 
   readonly DataStateEnum = DataStateEnum;
-
+/*
   onDelete(idProduct:number){
     this.productEventEmitter.emit({type:ProductActionsTypes.DELETE_PRODUCT,payload:idProduct})
   }
@@ -27,5 +27,5 @@ export class PoductsListComponent {
   onActionEvent($event:ActionEvent){
     this.productEventEmitter.emit($event);
   }
-
+*/
 }

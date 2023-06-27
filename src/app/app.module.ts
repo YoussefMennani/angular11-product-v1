@@ -17,6 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { PoductsNavBarComponent } from './components/products/poducts-nav-bar/poducts-nav-bar.component';
 import { PoductsListComponent } from './components/products/poducts-list/poducts-list.component';
 import { ProductItemComponent } from './components/products/poducts-list/product-item/product-item.component';
+import { StatsComponent } from './components/stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProductItemComponent } from './components/products/poducts-list/product
     PoductsNavBarComponent,
     PoductsListComponent,
     ProductItemComponent,
+    StatsComponent,
     
   ],
   imports: [
